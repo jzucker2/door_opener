@@ -15,6 +15,8 @@
 		972643D719DB4386006DFAA1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 972643D619DB4386006DFAA1 /* Images.xcassets */; };
 		972643DA19DB4386006DFAA1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972643D819DB4386006DFAA1 /* LaunchScreen.xib */; };
 		972643E619DB4386006DFAA1 /* DoorOpenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 972643E519DB4386006DFAA1 /* DoorOpenerTests.m */; };
+		972643F219DB49FC006DFAA1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972643F119DB49FC006DFAA1 /* CoreLocation.framework */; };
+		972643F419DB4A08006DFAA1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972643F319DB4A08006DFAA1 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		972643DF19DB4386006DFAA1 /* DoorOpenerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoorOpenerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		972643E419DB4386006DFAA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		972643E519DB4386006DFAA1 /* DoorOpenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorOpenerTests.m; sourceTree = "<group>"; };
+		972643F119DB49FC006DFAA1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		972643F319DB4A08006DFAA1 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972643F419DB4A08006DFAA1 /* CoreBluetooth.framework in Frameworks */,
+				972643F219DB49FC006DFAA1 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +99,7 @@
 				972643D319DB4386006DFAA1 /* Main.storyboard */,
 				972643D619DB4386006DFAA1 /* Images.xcassets */,
 				972643D819DB4386006DFAA1 /* LaunchScreen.xib */,
+				972643F519DB4A15006DFAA1 /* Frameworks */,
 				972643C619DB4386006DFAA1 /* Supporting Files */,
 			);
 			path = DoorOpener;
@@ -122,6 +129,16 @@
 				972643E419DB4386006DFAA1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		972643F519DB4A15006DFAA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				972643F319DB4A08006DFAA1 /* CoreBluetooth.framework */,
+				972643F119DB49FC006DFAA1 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +190,14 @@
 				TargetAttributes = {
 					972643C219DB4386006DFAA1 = {
 						CreatedOnToolsVersion = 6.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					972643DE19DB4386006DFAA1 = {
 						CreatedOnToolsVersion = 6.0.1;

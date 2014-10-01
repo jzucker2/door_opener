@@ -9,9 +9,11 @@
 #import "FirstViewController.h"
 #import "BeaconManager.h"
 
-@interface FirstViewController ()
+@interface FirstViewController () <BeaconManagerDelegate>
 
 @property (nonatomic) BeaconManager *beaconManager;
+
+@property (nonatomic, weak) IBOutlet UILabel *RSSILabel;
 
 @end
 
@@ -22,6 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     _beaconManager = [BeaconManager sharedBeaconManager];
+    _beaconManager.delegate = self;
     
     [_beaconManager startMonitoringForRegion:nil];
 }
@@ -29,6 +32,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - BeaconManagerDelegate
+
+- (void)discoveredBeacon:(NSString *)beaconKey distance:(NSString *)distance
+{
+    NSLog(@"View discoveredBeacon distance:%@", distance);
+    _RSSILabel.text = distance;
 }
 
 @end

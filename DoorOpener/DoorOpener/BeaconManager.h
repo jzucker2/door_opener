@@ -7,10 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class BeaconManager, CLRegion;
 
 @protocol BeaconManagerDelegate <NSObject>
+
+@optional
+
+- (void)discoveredBeacon:(NSString *)beaconKey distance:(NSString *)distance;
 
 @end
 

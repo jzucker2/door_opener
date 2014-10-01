@@ -7,8 +7,11 @@
 //
 
 #import "FirstViewController.h"
+#import "BeaconManager.h"
 
 @interface FirstViewController ()
+
+@property (nonatomic) BeaconManager *beaconManager;
 
 @end
 
@@ -17,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    _beaconManager = [BeaconManager sharedBeaconManager];
+    
+    [_beaconManager startMonitoringForRegion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

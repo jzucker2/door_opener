@@ -17,6 +17,7 @@
 		972643E619DB4386006DFAA1 /* DoorOpenerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 972643E519DB4386006DFAA1 /* DoorOpenerTests.m */; };
 		972643F219DB49FC006DFAA1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972643F119DB49FC006DFAA1 /* CoreLocation.framework */; };
 		972643F419DB4A08006DFAA1 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972643F319DB4A08006DFAA1 /* CoreBluetooth.framework */; };
+		97EA721A19DBDD8E006C28B3 /* BeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EA721919DBDD8E006C28B3 /* BeaconManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,9 @@
 		972643E519DB4386006DFAA1 /* DoorOpenerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DoorOpenerTests.m; sourceTree = "<group>"; };
 		972643F119DB49FC006DFAA1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		972643F319DB4A08006DFAA1 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		97EA721719DBDBF4006C28B3 /* BLEInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEInfo.h; sourceTree = "<group>"; };
+		97EA721819DBDD8E006C28B3 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconManager.h; sourceTree = "<group>"; };
+		97EA721919DBDD8E006C28B3 /* BeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +96,9 @@
 			children = (
 				972643CA19DB4386006DFAA1 /* AppDelegate.h */,
 				972643CB19DB4386006DFAA1 /* AppDelegate.m */,
-				972643CD19DB4386006DFAA1 /* FirstViewController.h */,
-				972643CE19DB4386006DFAA1 /* FirstViewController.m */,
+				97EA721C19DBDFE4006C28B3 /* FirstViewController */,
+				97EA721B19DBDD92006C28B3 /* BeaconManager */,
+				97EA721719DBDBF4006C28B3 /* BLEInfo.h */,
 				972643D019DB4386006DFAA1 /* SecondViewController.h */,
 				972643D119DB4386006DFAA1 /* SecondViewController.m */,
 				972643D319DB4386006DFAA1 /* Main.storyboard */,
@@ -139,6 +144,24 @@
 			);
 			name = Frameworks;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		97EA721B19DBDD92006C28B3 /* BeaconManager */ = {
+			isa = PBXGroup;
+			children = (
+				97EA721819DBDD8E006C28B3 /* BeaconManager.h */,
+				97EA721919DBDD8E006C28B3 /* BeaconManager.m */,
+			);
+			name = BeaconManager;
+			sourceTree = "<group>";
+		};
+		97EA721C19DBDFE4006C28B3 /* FirstViewController */ = {
+			isa = PBXGroup;
+			children = (
+				972643CD19DB4386006DFAA1 /* FirstViewController.h */,
+				972643CE19DB4386006DFAA1 /* FirstViewController.m */,
+			);
+			name = FirstViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +276,7 @@
 				972643CC19DB4386006DFAA1 /* AppDelegate.m in Sources */,
 				972643CF19DB4386006DFAA1 /* FirstViewController.m in Sources */,
 				972643C919DB4386006DFAA1 /* main.m in Sources */,
+				97EA721A19DBDD8E006C28B3 /* BeaconManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +467,7 @@
 				972643EB19DB4386006DFAA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		972643EC19DB4386006DFAA1 /* Build configuration list for PBXNativeTarget "DoorOpenerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +476,7 @@
 				972643EE19DB4386006DFAA1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
